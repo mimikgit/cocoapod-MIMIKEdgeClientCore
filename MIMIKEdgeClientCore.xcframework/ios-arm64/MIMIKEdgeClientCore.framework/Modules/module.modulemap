@@ -1,0 +1,4 @@
+framework module MIMIKEdgeClientCore {
+  header "MIMIKEdgeClientCore-Swift.h"
+  requires objc
+}
