@@ -124,7 +124,7 @@ Direct links:
 
 mimik
 ```
-https://github.com/mimikgit/cocoapod-MIMIKEdgeClient
+https://github.com/mimikgit/cocoapod-MIMIKEdgeClientCore
 ```
 
 ## License
