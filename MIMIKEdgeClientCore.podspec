@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.summary      = "mimik client library core"
 
   s.description  = <<-DESC
- MIMIKEdgeClient cocoapod is a Cocopods.org distributed framework that provides APIs to abstract away the complexities of interacting with mimik services.
+ MIMIKEdgeClient cocoapod is a Cocopods.org distributed framework that provides APIs to abstract away the complexities of interacting with mimik edgeEngine and other mimik services.
   DESC
 
   s.homepage     = "https://github.com/mimikgit/cocoapod-MIMIKEdgeClientCore"

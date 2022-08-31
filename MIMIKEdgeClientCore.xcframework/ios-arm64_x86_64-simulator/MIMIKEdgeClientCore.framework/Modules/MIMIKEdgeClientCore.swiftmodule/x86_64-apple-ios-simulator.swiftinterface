@@ -117,8 +117,48 @@ extension MIMIKEdgeClientCore.MIMIKBeamProvider {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-extension MIMIKEdgeClientCore.IdentityUser {
-  public func dictionary() -> [Swift.String : Any]?
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityResponse {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case connection
+    case provider
+    case userId
+    case isSocial
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case userId
+    case email
+    case phoneNumber
+    case roles
+    case identities
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
 }
 extension Swift.String : Swift.CodingKey {
   public var stringValue: Swift.String {
@@ -367,9 +407,7 @@ public struct MIMIKMicroserviceEmbedError : Swift.Codable {
       get
     }
   }
-  public static let kEdgeEngineExpectedVersion: Swift.String
   required public init?(userAuthorization: MIMIKEdgeClientCore.MIMIKAuthorization?)
-  final public class func edgeEngineExpectedVersion() -> Swift.String
   final public class func setLoggingLevel(level: MIMIKEdgeClientCore.MIMIKLog.Level, subsystem: MIMIKEdgeClientCore.MIMIKLog.SubSystem = .mimikEdgeClient)
   final public class func selectBackend(backend: MIMIKEdgeClientCore.MIMIKEdgeClient.Backend)
   final public class func selectedBackend() -> MIMIKEdgeClientCore.MIMIKEdgeClient.Backend
@@ -674,33 +712,16 @@ extension Swift.String {
   @objc override dynamic public init()
   @objc deinit
 }
-public struct IdentityResponse : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case connection
-    case provider
-    case userId
-    case isSocial
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
+extension MIMIKEdgeClientCore.MIMIKEdgeClient {
+  public struct IdentityResponse : Swift.Codable {
+    public var connection: Swift.String?
+    public var provider: Swift.String?
+    public var userId: Swift.String?
+    public var isSocial: Swift.Bool?
+    public init(connection: Swift.String?, provider: Swift.String?, userId: Swift.String?, isSocial: Swift.Bool?)
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
   }
-  public var connection: Swift.String?
-  public var provider: Swift.String?
-  public var userId: Swift.String?
-  public var isSocial: Swift.Bool?
-  public init(connection: Swift.String?, provider: Swift.String?, userId: Swift.String?, isSocial: Swift.Bool?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 extension MIMIKEdgeClientCore.MIMIKDriveProvider {
   public struct CreateManagedFile {
@@ -727,35 +748,17 @@ extension MIMIKEdgeClientCore.MIMIKEdgeClient {
   final public class func mimeTypeFor(type: UniformTypeIdentifiers.UTType) -> Swift.String?
   final public class func mimeTypeFor(fileExtension: Swift.String) -> Swift.String?
 }
-public struct IdentityUser : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case userId
-    case email
-    case phoneNumber
-    case roles
-    case identities
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
+extension MIMIKEdgeClientCore.MIMIKEdgeClient {
+  public struct IdentityUser : Swift.Codable {
+    public var userId: Swift.String?
+    public var email: Swift.String?
+    public var phoneNumber: Swift.String?
+    public var roles: [Swift.String]?
+    public var identities: MIMIKEdgeClientCore.JSONValue?
+    public init(userId: Swift.String?, email: Swift.String?, phoneNumber: Swift.String?, roles: [Swift.String]?, identities: MIMIKEdgeClientCore.JSONValue?)
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
   }
-  public var userId: Swift.String?
-  public var email: Swift.String?
-  public var phoneNumber: Swift.String?
-  public var roles: [Swift.String]?
-  public var identities: MIMIKEdgeClientCore.JSONValue?
-  public init(userId: Swift.String?, email: Swift.String?, phoneNumber: Swift.String?, roles: [Swift.String]?, identities: MIMIKEdgeClientCore.JSONValue?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers open class Configuration {
   public static var dateFormat: Swift.String
@@ -1084,12 +1087,12 @@ extension MIMIKEdgeClientCore.MIMIKEdgeClient {
   final public func authenticateClientLibrary(userAccessToken: Swift.String) -> Swift.Result<MIMIKEdgeClientCore.MIMIKAuthorization, Foundation.NSError>
   
   #if compiler(>=5.3) && $AsyncAwait
-  final public func deleteAccount(service: MIMIKEdgeClientCore.MIMIKService, accessToken: Swift.String) async -> Swift.Result<MIMIKEdgeClientCore.IdentityUser, Foundation.NSError>
+  final public func deleteAccount(service: MIMIKEdgeClientCore.MIMIKService, accessToken: Swift.String) async -> Swift.Result<MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser, Foundation.NSError>
   #endif
 
   
   #if compiler(>=5.3) && $AsyncAwait
-  final public func accountInformation(service: MIMIKEdgeClientCore.MIMIKService) async -> Swift.Result<MIMIKEdgeClientCore.IdentityUser, Foundation.NSError>
+  final public func accountInformation(service: MIMIKEdgeClientCore.MIMIKService) async -> Swift.Result<MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser, Foundation.NSError>
   #endif
 
   
@@ -1131,6 +1134,12 @@ open class MIMIKURLComponentsBuilder {
 extension MIMIKEdgeClientCore.MIMIKBeam.ReadStatus : Swift.Equatable {}
 extension MIMIKEdgeClientCore.MIMIKBeam.ReadStatus : Swift.Hashable {}
 extension MIMIKEdgeClientCore.MIMIKBeam.ReadStatus : Swift.RawRepresentable {}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityResponse.CodingKeys : Swift.Equatable {}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityResponse.CodingKeys : Swift.Hashable {}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityResponse.CodingKeys : Swift.RawRepresentable {}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser.CodingKeys : Swift.Equatable {}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser.CodingKeys : Swift.Hashable {}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser.CodingKeys : Swift.RawRepresentable {}
 extension MIMIKEdgeClientCore.MIMIKMicroservice.MicroserviceType : Swift.Equatable {}
 extension MIMIKEdgeClientCore.MIMIKMicroservice.MicroserviceType : Swift.Hashable {}
 extension MIMIKEdgeClientCore.MIMIKMicroservice.MicroserviceType : Swift.RawRepresentable {}
@@ -1149,12 +1158,6 @@ extension MIMIKEdgeClientCore.MIMIKClusterProvider.ClusterType : Swift.RawRepres
 extension MIMIKEdgeClientCore.MIMIKLog.Level : Swift.Equatable {}
 extension MIMIKEdgeClientCore.MIMIKLog.Level : Swift.Hashable {}
 extension MIMIKEdgeClientCore.MIMIKLog.Level : Swift.RawRepresentable {}
-extension MIMIKEdgeClientCore.IdentityResponse.CodingKeys : Swift.Equatable {}
-extension MIMIKEdgeClientCore.IdentityResponse.CodingKeys : Swift.Hashable {}
-extension MIMIKEdgeClientCore.IdentityResponse.CodingKeys : Swift.RawRepresentable {}
-extension MIMIKEdgeClientCore.IdentityUser.CodingKeys : Swift.Equatable {}
-extension MIMIKEdgeClientCore.IdentityUser.CodingKeys : Swift.Hashable {}
-extension MIMIKEdgeClientCore.IdentityUser.CodingKeys : Swift.RawRepresentable {}
 extension MIMIKEdgeClientCore.MIMIKHealthCheck.Result : Swift.Equatable {}
 extension MIMIKEdgeClientCore.MIMIKHealthCheck.Result : Swift.Hashable {}
 extension MIMIKEdgeClientCore.MIMIKHealthCheck.Result : Swift.RawRepresentable {}

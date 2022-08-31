@@ -411,6 +411,8 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore15MIMIKEdgeClient")
 
 
 
+
+
 SWIFT_CLASS("_TtC19MIMIKEdgeClientCore23MIMIKEdgeClientIdentity")
 @interface MIMIKEdgeClientIdentity : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -916,6 +918,8 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore15MIMIKEdgeClient")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
 
 
 

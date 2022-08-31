@@ -409,6 +409,8 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore15MIMIKEdgeClient")
 
 
 
+
+
 SWIFT_CLASS("_TtC19MIMIKEdgeClientCore23MIMIKEdgeClientIdentity")
 @interface MIMIKEdgeClientIdentity : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
