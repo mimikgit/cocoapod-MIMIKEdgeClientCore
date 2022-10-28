@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
-// swift-module-flags: -target arm64-apple-ios14.0-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MIMIKEdgeClientCore
+// swift-module-flags: -target arm64-apple-ios15.0-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MIMIKEdgeClientCore
 import Alamofire
 import AppAuth
 import Foundation
@@ -221,6 +221,8 @@ extension Swift.KeyedDecodingContainerProtocol {
     case thumbnail
     case identity
     case finance
+    case contest
+    case content
     case unknown
     public init?(rawValue: Swift.String)
     public typealias AllCases = [MIMIKEdgeClientCore.MIMIKService.ServiceType]
@@ -692,6 +694,7 @@ extension Swift.String {
     case mimikEdgeClientAdapter
     case mimikEdgeClientAssessment
     case mimikEdgeClientContentCache
+    case mimikEdgeClientContest
     case mimikEdgeClientFinance
     case mimikEdgeClientIdentity
     case mimikEdgeClientNotification
@@ -1123,11 +1126,11 @@ open class MIMIKURLComponentsBuilder {
       get
     }
   }
-  public class func frontendUrlRequest(microservice: MIMIKEdgeClientCore.MIMIKMicroservice, authorization: MIMIKEdgeClientCore.MIMIKAuthorization, url: Foundation.URL, method: MIMIKEdgeClientCore.MIMIKRequest.Method, dictionary: [Swift.String : Any]?, timeoutInterval: Foundation.TimeInterval = 60.0, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy) -> Foundation.URLRequest?
+  public class func authorizedBackendUrlRequest(service: MIMIKEdgeClientCore.MIMIKService, path: Swift.String, queryItems: [Foundation.URLQueryItem], authorization: MIMIKEdgeClientCore.MIMIKAuthorization?, method: MIMIKEdgeClientCore.MIMIKRequest.Method, dictionary: [Swift.String : Any]?) -> Swift.Result<Foundation.URLRequest, Foundation.NSError>
+  public class func backendEncodedUrlRequest(urlRequest: Foundation.URLRequest, dictionary: [Swift.String : Any]?) -> Foundation.URLRequest?
   public class func backendUrlRequestFrom(authorization: MIMIKEdgeClientCore.MIMIKAuthorization, url: Foundation.URL, method: MIMIKEdgeClientCore.MIMIKRequest.Method, httpHeaders: Alamofire.HTTPHeaders? = nil) -> Foundation.URLRequest?
   public class func backendUrlRequestFrom(authorization: MIMIKEdgeClientCore.MIMIKAuthorization, path: Swift.String, method: MIMIKEdgeClientCore.MIMIKRequest.Method, httpHeaders: Alamofire.HTTPHeaders? = nil) -> Foundation.URLRequest?
-  public class func backendEncodedUrlRequestFrom(urlRequest: Foundation.URLRequest) -> Foundation.URLRequest?
-  public class func backendEncodedUrlRequestFrom(urlRequest: Foundation.URLRequest, dictionary: [Swift.String : Any]) -> Foundation.URLRequest?
+  public class func frontendUrlRequest(microservice: MIMIKEdgeClientCore.MIMIKMicroservice, authorization: MIMIKEdgeClientCore.MIMIKAuthorization, url: Foundation.URL, method: MIMIKEdgeClientCore.MIMIKRequest.Method, dictionary: [Swift.String : Any]?, timeoutInterval: Foundation.TimeInterval = 60.0, cachePolicy: Foundation.URLRequest.CachePolicy = .useProtocolCachePolicy) -> Foundation.URLRequest?
   @objc override dynamic public init()
   @objc deinit
 }
