@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		oAZGJ5PetRDgWx6sneDvqx/Y6HI=
+		e7TplTM84BTWGUZ6y9nq/5awaYY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15,49 +15,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5wLRUps6nO3zzLFBYQkX0hjS77uh7WCyyFpPkQxefBQ=
+			qYc56tByk9sgRJdjWHab8E6UPesuALKQ6kvQouIM6WA=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w+FSEIBHQyDeq+s5TOvjculsreFPbucXRB2ijkP06yU=
+			/xjJkvXl6cLd/aiTbE7oYZ4BJAVkyjUqkq6PdL2f1xw=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UatlFM8eVAXzBuFMrNcCKrHEVgg7IINWxkXymSfOaL8=
+			BhwEG90Snejh76k0bSbi+euwh2gS80a3hBtDDabkeWU=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V7iMbZJgLeLo7m+fLC3JxAugZDAZ7r7hKDer0xK691c=
+			h3cYWS+994z/XNDr6r/eMeCYXdwHp4HgoSkzGCUTDog=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UC3zbSS+Bd5Gz1SNH92aclMz2id8G0+/gahmStDZLug=
+			0yMoue4/1yCFjBr4iEWGzx8ShDf53KjZP9vF6KGvCSI=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QRweACthbDC7e8PDeReqTow6ehGBvFGXA/d54Zjy6s8=
+			dRYffDyDIIaUi12m7GrIF4LFwvRur6CanALB2YsRQlA=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AW6Lt5DW8M1sTKAXn+U6jvtt2QweOuWAIZQLaWY6R5o=
+			+CjAK6fIbEzXgiIMO2ZQ8rXL2ZFis6IB8PjMELqzdak=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BjLprAd2HqZlYhThkbLXkTOQcuei1b4MfStTGnydQi8=
+			BEJXsLOOAPjo68y3jIoiGYlGZ+uWlPl0LJdyZV7QUh4=
 			</data>
 		</dict>
 	</dict>

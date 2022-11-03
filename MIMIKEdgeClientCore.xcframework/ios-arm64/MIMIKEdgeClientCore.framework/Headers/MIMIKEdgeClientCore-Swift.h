@@ -394,6 +394,10 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore15MIMIKEdgeClient")
 
 
 
+@interface MIMIKEdgeClient (SWIFT_EXTENSION(MIMIKEdgeClientCore))
+@end
+
+
 
 
 
@@ -520,6 +524,12 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore12MIMIKService")
 - (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC19MIMIKEdgeClientCore16MIMIKSwaggerMock")
+@interface MIMIKSwaggerMock : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #if __has_attribute(external_source_symbol)

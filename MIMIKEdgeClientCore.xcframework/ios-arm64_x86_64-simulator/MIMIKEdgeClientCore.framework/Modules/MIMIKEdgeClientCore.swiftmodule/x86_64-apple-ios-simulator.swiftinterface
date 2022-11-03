@@ -246,6 +246,11 @@ extension Swift.KeyedDecodingContainerProtocol {
   public func urlComponents() -> Foundation.URLComponents?
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers public class MIMIKSwaggerMock : ObjectiveC.NSObject {
+  public class func validateResponse(mockName: Swift.String?, response: Alamofire.AFDataResponse<Foundation.Data>?) -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers public class MIMIKBeamProvider : ObjectiveC.NSObject {
   
   #if compiler(>=5.3) && $AsyncAwait
@@ -695,6 +700,7 @@ extension Swift.String {
     case mimikEdgeClientAssessment
     case mimikEdgeClientContentCache
     case mimikEdgeClientContest
+    case mimikEdgeClientContents
     case mimikEdgeClientFinance
     case mimikEdgeClientIdentity
     case mimikEdgeClientNotification
@@ -985,6 +991,15 @@ public struct MIMIKHealthCheck : Swift.Codable {
   final public func userAccessTokenDecoded() -> JWTDecode.JWT?
   final public func userAccessTokenExpiryDate() -> Foundation.Date?
   @objc deinit
+}
+extension MIMIKEdgeClientCore.MIMIKEdgeClient {
+  public typealias PagingHandler = (_ paging: MIMIKEdgeClientCore.MIMIKEdgeClient.PagingInfo?) -> Swift.Void
+  @objc public class PagingInfo : ObjectiveC.NSObject {
+    final public let count: Swift.Int
+    final public let startAfter: Swift.String
+    public init(count: Swift.Int, startAfter: Swift.String)
+    @objc deinit
+  }
 }
 @objc public class MIMIKBeamTokenData : ObjectiveC.NSObject, Foundation.NSCoding, Swift.Codable {
   public var data: [MIMIKEdgeClientCore.MIMIKBeamToken]?
