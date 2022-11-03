@@ -248,6 +248,8 @@ extension Swift.KeyedDecodingContainerProtocol {
 }
 @objc @_inheritsConvenienceInitializers public class MIMIKSwaggerMock : ObjectiveC.NSObject {
   public class func validateResponse(mockName: Swift.String?, response: Alamofire.AFDataResponse<Foundation.Data>?) -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
+  public class func validatePagingInfo(dataKey: Swift.String, mockName: Swift.String?, response: Alamofire.AFDataResponse<Foundation.Data>?) -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
+  public class func processPagingInfo(mockName: Swift.String, response: Alamofire.AFDataResponse<Foundation.Data>, pagingHandler: (_ paging: MIMIKEdgeClientCore.MIMIKEdgeClient.PagingInfo?) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
