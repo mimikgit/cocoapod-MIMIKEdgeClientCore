@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		bILBA1u8LK/9yLDQT5y8cFduSM4=
+		07hrfBdxwDZqejak4YA1JH/hzmU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15,49 +15,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qYc56tByk9sgRJdjWHab8E6UPesuALKQ6kvQouIM6WA=
+			Dglt1A2lbUQ402hhZ2vfuxl5bxoVotyQyuameXlpgsg=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/xjJkvXl6cLd/aiTbE7oYZ4BJAVkyjUqkq6PdL2f1xw=
+			XjEPytNjzKXk0LTLaV1mxUAAFinEmPT30zsHcltjq5U=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hz9O/46MVVXicGeH2Fi9FXrR/lLbK3GVjLJn7DJZp8Y=
+			eoPS2hGAttxDNhI4mwq7VcPFnYw6wX1JeM2EEOpINMI=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CJhno6ql6+VssXI4ejofDYpZj4gU15i4G4jPD/1OWAc=
+			IMMxUVqw6FKOrCFOA6pNAI86/RlCZ9yUvYTnLnY1KC8=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0yMoue4/1yCFjBr4iEWGzx8ShDf53KjZP9vF6KGvCSI=
+			RuUBJJrHJUNxuB0sXzffHOq9K4YCYsj5vn9bsNlVE5s=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iUmcvHF9SZt5Zge3OyP8zpn4Ikx0fXV9kLCZlj1lfnI=
+			S7Ok+fkRtGuUtDR/OZ5sKt1UKC7TsOEcsabVkdOfnCc=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P8DxywY4JIIAvamEd19B68A+4eUScBA1wvC5gpsulrk=
+			/JUy/gTlqVFiZxPh7Tx4gJGpKCWyDIz7t12XUFkP9KI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -71,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YEGrPOb+KNlYU/biZMiD75HiC+qms97M5RAMGjJsibQ=
+			7P7JcMEqI7N/GkPjB0ZcNTsA+lHVJkS7MOGtGu93Y6I=
 			</data>
 		</dict>
 	</dict>

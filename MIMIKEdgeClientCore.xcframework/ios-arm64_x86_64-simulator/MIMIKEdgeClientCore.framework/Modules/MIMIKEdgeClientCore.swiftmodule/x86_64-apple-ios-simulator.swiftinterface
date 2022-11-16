@@ -13,14 +13,23 @@ import _Concurrency
 import os.log
 import os
 extension MIMIKEdgeClientCore.MIMIKEdgeClient {
+  final public class func responseDataJSON(response: Alamofire.AFDataResponse<Foundation.Data>, mockName: Swift.String? = nil) -> Swift.Result<SwiftyJSON.JSON, Foundation.NSError>
+  final public class func responseDataJSON(data: Foundation.Data) -> Swift.Result<SwiftyJSON.JSON, Foundation.NSError>
+  final public class func responseDataKeyJSON(response: Alamofire.AFDataResponse<Foundation.Data>, key: Swift.String) -> SwiftyJSON.JSON
+  final public class func responseError(response: Alamofire.AFDataResponse<Foundation.Data>) -> Foundation.NSError?
+  @available(*, deprecated, renamed: "responseDataJSON")
   final public class func validateResponse(response: Alamofire.AFDataResponse<Foundation.Data>, key: Swift.String = "data") -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
+  @available(*, deprecated, renamed: "responseDataJSON")
   final public class func validateSuccess(data: Any, key: Swift.String = "data") -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
+  @available(*, deprecated, renamed: "responseError")
   final public class func checkResponseForError(response: Foundation.HTTPURLResponse?) -> Swift.Error?
+  @available(*, deprecated, renamed: "responseModelError")
   final public class func foundAndPrintedModelError(response: Alamofire.AFDataResponse<Foundation.Data>) -> Swift.Bool
-}
-extension MIMIKEdgeClientCore.MIMIKEdgeClient {
+  @available(*, deprecated, renamed: "responseError")
   final public class func responseHasError(response: Alamofire.AFDataResponse<Any>) -> Swift.Error?
+  @available(*, deprecated, renamed: "responseError")
   final public class func responseHasError(response: Alamofire.AFDataResponse<Any?>) -> Swift.Error?
+  @available(*, deprecated, renamed: "responseError")
   final public class func responseHasError(response: Alamofire.AFDataResponse<Foundation.Data?>) -> Swift.Error?
 }
 @objc public class MIMIKDriveFileData : ObjectiveC.NSObject, Foundation.NSCoding, Swift.Codable {
@@ -137,6 +146,8 @@ extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityResponse {
       get
     }
   }
+  public func dictionary() -> [Swift.String : Any]?
+  public func jsonString() -> Swift.String?
 }
 extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser {
   public enum CodingKeys : Swift.String, Swift.CodingKey {
@@ -159,6 +170,8 @@ extension MIMIKEdgeClientCore.MIMIKEdgeClient.IdentityUser {
       get
     }
   }
+  public func dictionary() -> [Swift.String : Any]?
+  public func jsonString() -> Swift.String?
 }
 extension Swift.String : Swift.CodingKey {
   public var stringValue: Swift.String {
@@ -247,8 +260,9 @@ extension Swift.KeyedDecodingContainerProtocol {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class MIMIKSwaggerMock : ObjectiveC.NSObject {
+  @available(*, deprecated, renamed: "mockResponseDataJSON")
   public class func validateResponse(mockName: Swift.String?, response: Alamofire.AFDataResponse<Foundation.Data>?) -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
-  public class func validatePagingInfo(dataKey: Swift.String, mockName: Swift.String?, response: Alamofire.AFDataResponse<Foundation.Data>?) -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
+  @available(*, deprecated, renamed: "mockResponseDataJSON")
   public class func processPagingInfo(mockName: Swift.String, response: Alamofire.AFDataResponse<Foundation.Data>, pagingHandler: (_ paging: MIMIKEdgeClientCore.MIMIKEdgeClient.PagingInfo?) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
@@ -423,6 +437,7 @@ public struct MIMIKMicroserviceEmbedError : Swift.Codable {
   final public class func activateExternalEdgeEngine(host: Swift.String, port: Swift.Int) -> Swift.Result<Foundation.URLComponents, Foundation.NSError>
   final public class func externalEdgeEngineActivated() -> Swift.Bool
   final public func setUserAuthorization(authorization: MIMIKEdgeClientCore.MIMIKAuthorization) -> Swift.Result<Swift.Bool, Foundation.NSError>
+  final public func removeUserAuthorization()
   final public func userAuthorization() -> MIMIKEdgeClientCore.MIMIKAuthorization?
   
   #if compiler(>=5.3) && $AsyncAwait
@@ -1022,11 +1037,13 @@ extension MIMIKEdgeClientCore.MIMIKEdgeClient {
   final public class func edgeEngineWorkingDirectory() -> Foundation.URL?
 }
 public struct ModelError : Swift.Codable {
-  public var statusCode: Swift.Double
+  public var statusCode: Swift.Int
   public var title: Swift.String
   public var message: Swift.String
   public var info: MIMIKEdgeClientCore.JSONValue?
-  public init(statusCode: Swift.Double, title: Swift.String, message: Swift.String, info: MIMIKEdgeClientCore.JSONValue?)
+  public init(statusCode: Swift.Int, title: Swift.String, message: Swift.String, info: MIMIKEdgeClientCore.JSONValue?)
+  public func mimikDescription() -> Swift.String
+  public func userInfo() -> [Swift.String : Any]
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }

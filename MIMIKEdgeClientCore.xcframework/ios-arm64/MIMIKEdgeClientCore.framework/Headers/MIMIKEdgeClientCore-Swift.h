@@ -394,13 +394,13 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore15MIMIKEdgeClient")
 
 
 
+
+
+
+
+
 @interface MIMIKEdgeClient (SWIFT_EXTENSION(MIMIKEdgeClientCore))
 @end
-
-
-
-
-
 
 
 
@@ -531,6 +531,7 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore16MIMIKSwaggerMock")
 @interface MIMIKSwaggerMock : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
