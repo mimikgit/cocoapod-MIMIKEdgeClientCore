@@ -1,6 +1,6 @@
 # MIMIKEdgeClientCore
 
- MIMIKEdgeClientCore library can help you interact with mimik services with the following APIs:
+ MIMIKEdgeClientCore library can help you interact with mimik core services with the following APIs:
  
  # Core Services
 
@@ -38,7 +38,6 @@
  * `logDebug`
  * `logFault`
  * `logError`
- * `edgeEngineExpectedVersion`
 
  ## Authentication Services
  
@@ -83,7 +82,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 def mimik
-  pod 'MIMIKEdgeClientCore', '13.6.0'
+  pod 'MIMIKEdgeClientCore'
 end
 
 target '{target}' do
@@ -113,8 +112,11 @@ Don't forget to checkout all mimik client and service libraries [available on Gi
 
 Direct links:
  
+ * [MIMIKEdgeClientCore](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientCore)
  * [MIMIKEdgeClientEngine](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientEngine)
  * [MIMIKEdgeClientUser](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientUser)
+ * [MIMIKEdgeClientContest](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientContest)
+ * [MIMIKEdgeClientContent](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientContent)
  * [MIMIKEdgeClientAssessment](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientAssessment)
  * [MIMIKEdgeClientNotification](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientNotification)
  * [MIMIKEdgeClientTracker](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientTracker)
@@ -123,8 +125,9 @@ Direct links:
 ## Author
 
 mimik
+
 ```
-https://github.com/mimikgit/cocoapod-MIMIKEdgeClient
+https://github.com/mimikgit/cocoapod-MIMIKEdgeClientCore
 ```
 
 ## License

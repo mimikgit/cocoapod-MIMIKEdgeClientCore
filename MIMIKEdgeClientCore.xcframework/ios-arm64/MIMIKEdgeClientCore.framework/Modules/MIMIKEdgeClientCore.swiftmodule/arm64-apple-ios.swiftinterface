@@ -14,6 +14,7 @@ import os.log
 import os
 extension MIMIKEdgeClientCore.MIMIKEdgeClient {
   final public class func responseDataJSON(response: Alamofire.AFDataResponse<Foundation.Data>, mockName: Swift.String? = nil) -> Swift.Result<SwiftyJSON.JSON, Foundation.NSError>
+  final public class func pagingInfo(response: Alamofire.AFDataResponse<Foundation.Data>, pagingHandler: (_ paging: MIMIKEdgeClientCore.MIMIKEdgeClient.PagingInfo?) -> Swift.Void, mockName: Swift.String? = nil)
   final public class func responseDataJSON(data: Foundation.Data) -> Swift.Result<SwiftyJSON.JSON, Foundation.NSError>
   final public class func responseDataKeyJSON(response: Alamofire.AFDataResponse<Foundation.Data>, key: Swift.String) -> SwiftyJSON.JSON
   final public class func responseError(response: Alamofire.AFDataResponse<Foundation.Data>) -> Foundation.NSError?
@@ -23,7 +24,7 @@ extension MIMIKEdgeClientCore.MIMIKEdgeClient {
   final public class func validateSuccess(data: Any, key: Swift.String = "data") -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
   @available(*, deprecated, renamed: "responseError")
   final public class func checkResponseForError(response: Foundation.HTTPURLResponse?) -> Swift.Error?
-  @available(*, deprecated, renamed: "responseModelError")
+  @available(*, deprecated, renamed: "responseError")
   final public class func foundAndPrintedModelError(response: Alamofire.AFDataResponse<Foundation.Data>) -> Swift.Bool
   @available(*, deprecated, renamed: "responseError")
   final public class func responseHasError(response: Alamofire.AFDataResponse<Any>) -> Swift.Error?
@@ -260,9 +261,9 @@ extension Swift.KeyedDecodingContainerProtocol {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class MIMIKSwaggerMock : ObjectiveC.NSObject {
-  @available(*, deprecated, renamed: "mockResponseDataJSON")
+  @available(*, deprecated, renamed: "MIMIKEdgeClient.responseDataJSON")
   public class func validateResponse(mockName: Swift.String?, response: Alamofire.AFDataResponse<Foundation.Data>?) -> (dataJSON: SwiftyJSON.JSON?, error: Swift.Error?)
-  @available(*, deprecated, renamed: "mockResponseDataJSON")
+  @available(*, deprecated, renamed: "MIMIKEdgeClient.pagingInfo")
   public class func processPagingInfo(mockName: Swift.String, response: Alamofire.AFDataResponse<Foundation.Data>, pagingHandler: (_ paging: MIMIKEdgeClientCore.MIMIKEdgeClient.PagingInfo?) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
