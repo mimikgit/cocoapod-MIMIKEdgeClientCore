@@ -55,7 +55,7 @@
 
 ## edgeEngine Framework 
  
-For adding edgeEngine framework to your project please see: [MIMIKEdgeClientEngine](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientEngine). Coming soon.
+For adding edgeEngine framework to your project please see: [MIMIKEdgeClientEngine](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientEngine)
 
 ## Supported Platforms, Targets
 * `iOS Devices running iOS 14+`
