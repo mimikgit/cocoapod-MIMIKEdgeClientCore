@@ -452,7 +452,7 @@ public struct MIMIKMicroserviceEmbedError : Swift.Codable {
 
   
   #if compiler(>=5.3) && $AsyncAwait
-  final public func undeployMicroservice(edgeEngineAccessToken: Swift.String, config: MIMIKEdgeClientCore.MIMIKMicroserviceConfig) async -> Swift.Result<Swift.Bool, Foundation.NSError>
+  final public func undeployMicroservice(edgeEngineAccessToken: Swift.String, microservice: MIMIKEdgeClientCore.MIMIKMicroservice) async -> Swift.Result<Swift.Bool, Foundation.NSError>
   #endif
 
   

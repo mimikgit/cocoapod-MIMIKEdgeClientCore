@@ -10,31 +10,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3y+rVFOYJp6AK9G1nJXPfMcoXNQ=
+		+PF02QZ3GruohcwI45Qqj+ydZoI=
 		</data>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		3xDPhtD2LTUZzJpGUnRfjVMc/Wk=
+		S++ZJI2x/yWs2MPb2klQG3EmrJg=
 		</data>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		OGey57XSEikt2+MgF57nTby2hvU=
+		4t9s+YQ5t3XjvbPvnt4KrAq4jkY=
 		</data>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		b9YSpqzY989myUEL0hbYdzDgumY=
+		8PUxVx3uHs4B/3QS0adw50R8mJQ=
 		</data>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		DirjqTOqvr2WIqXGoKGFRcsAAqU=
+		J5NHvjWCH0bQbhk+Oet5VDBxdCQ=
 		</data>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hqDm5XTOrZcBnR9D8s1gXvXo3Ck=
+		EjSHGimqc2izsi04fuH1DtQJ46c=
 		</data>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		e0tYtDaXTPDiJtBPi3BHBmEDjq8=
+		+uczzub+vIkQY0PHiN9WWtbZq14=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,42 +54,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gomZ67za8fW78e14hCeh2PPpsFpEoouAFJ6gi4fl608=
+			uRavCB3KO+XFuuc9HsIu2ZTzbvw/jK1/bcHw4Ez5dCI=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ntCcHnUAaROdABNjVzBn2oYmriOJ4wo3C9PeMfzMjYA=
+			yr0KWSZJJo+26U8OgphfylvCVWEhjd1yIhmMolIOD8U=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GIaK7KFWJRfom8p4hgjRj2E64Jt2e4D52ZZ6lTDCN2U=
+			wbpEQie8h4NLFAWnGBkUylIWbqHCx6P+n9iVziOnMgM=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kt4ZQkIPlSZ6HEoFJUC0Zw+OpUYx8q1f1oNUY8si9wQ=
+			qCctX881FuD85KET8afsOcA13spsqYpyElQAC79kBWw=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+CePkv16g8N1/YVMnKAYh20iGoIvjHHLhExb8ewHEgA=
+			CKAS7nbhGSnezKiYGRN/d54+raDHLKZikWt85R9dJeY=
 			</data>
 		</dict>
 		<key>Modules/MIMIKEdgeClientCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fbNbYvVgdUVUkbbiMRhs4WpaEYu12yjPqki7XgRQTrI=
+			ZseoX7Kx0ez8PMt7f52d9KK37wav6hiKMxYzjJESzMs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
