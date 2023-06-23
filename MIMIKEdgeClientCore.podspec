@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MIMIKEdgeClientCore"
-  s.version      = "13.6.9"
+  s.version      = "14.0.0"
   s.summary      = "mimik client library core"
 
   s.description  = <<-DESC
@@ -24,11 +24,10 @@ MIMIKEdgeClientCore cocoapod is a Cocopods.org distributed framework that provid
 
   s.vendored_frameworks = "MIMIKEdgeClientCore.xcframework"
 
-  s.dependency 'Alamofire', '~> 5.6.4'
+  s.dependency 'Alamofire', '~> 5.7.1'
   s.dependency 'SwiftyJSON', '~> 5.0.1'
   s.dependency 'JWTDecode', '~> 3.0.1'
-  s.dependency 'AppAuth', '~> 1.6.0'
+  s.dependency 'AppAuth', '~> 1.6.2'
 
-  s.platform = 'ios', '14.0'
-  s.swift_version = '5.5'
+  s.platform = 'ios', '15.0'
 end

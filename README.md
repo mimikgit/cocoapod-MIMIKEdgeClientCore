@@ -2,26 +2,34 @@
 
  MIMIKEdgeClientCore library can help you interact with mimik core services with the following APIs:
  
- # Core Services
+## Core Services
+
+### Environment
 
  * `setLoggingLevel`
  * `selectBackend`
  * `selectedBackend`
+ * `activateExternalEdgeEngine`
+ * `externalEdgeEngineActivated`
+ * `healthCheck`
  * `manuallySelectedBackend`
  * `applicationBackend`
  * `forceDefaultBackendSelection`
  * `defaultBackend`
- * `activateExternalEdgeEngine`
- * `externalEdgeEngineActivated`
- * `setUserAuthorization`
- * `userAuthorization`
- * `healthCheck`
+ * `workingDirectory`
+ * `edgeEngineWorkingDirectory`
+
+### edgeEngine controls
+ 
  * `deployMicroservice`
  * `undeployMicroservice`
+ * `undeployMicroserviceComponent`
  * `deployedMicroservices`
  * `verifyDeployedMicroserviceMatching`
  * `deployedMicroserviceImages`
+ * `deployedMicroserviceImage`
  * `deployedMicroserviceContainers`
+ * `deployedMicroserviceContainer`
  * `edgeEngineIdToken`
  * `edgeEngineInfo`
  * `externalEdgeEngineIsRunning`
@@ -29,24 +37,34 @@
  * `edgeEngineUrlString`
  * `edgeEngineWorkingDirectory`
  * `edgeEngineWebSocketServiceLink`
- * `validateMicroserviceResponse`
- * `validateSuccess`
- * `checkResponseForError`
- * `foundAndPrintedModelError`
- * `logType`
- * `logInfo`
- * `logDebug`
- * `logFault`
- * `logError`
 
- ## Authentication Services
+### Backend Calls
+ * `callBackend`
+
+### Response Validation
  
- * `authorizeWithDeveloperIdToken`
- * `authorizeWithFederation`
- * `authorizeWithPhone`
- * `authorizeWithEmail`
- * `continueAuthorizationWith`
- * `completeAuthorizationWith`
+ * `responseJSON`
+ * `responseData`
+ * `responsePagingInfo`
+ * `responseError`
+
+### UTType Documents
+ * `uttypeFor`
+ * `fileExtensionFor`
+ * `mimeTypeFor`
+
+ 
+### Content Services
+ * `uploadContent`
+ * `downloadContent`
+ * `downloadImageContent`
+ * `exportVideo`
+
+## Authentication Services
+ 
+ * `authenticateEdgeEngineAccess`
+ * `validateEdgeEngineAccess`
+ * `authenticateUserAccess`
  * `deleteAccount`
  * `accountInformation`
  * `supportedAuthenticationScopes`
@@ -58,23 +76,22 @@
 For adding edgeEngine framework to your project please see: [MIMIKEdgeClientEngine](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientEngine)
 
 ## Supported Platforms, Targets
-* `iOS Devices running iOS 14+`
-* `iOS Simulators running iOS 14+`
+* `iOS Devices running iOS 15+`
+* `iOS Simulators running iOS 15+`
 * `iOS Mac Catalyst running macOS 12.0`
 
 ## Requirements
 ```
-iOS 14.0+
+iOS 15.0+
 ```
 
 ## Installation
 
 To install it, simply add the following lines to your Podfile:
 
-For Xcode 13.4.x compatibility
 
 ```swift
-platform :ios, '14.0'
+platform :ios, '15.0'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/mimikgit/cocoapod-edge-specs.git'
 
@@ -94,7 +111,7 @@ post_install do |installer|
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['VALID_ARCHS'] = '$(ARCHS_STANDARD_64_BIT)'
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
     end
   end
@@ -115,12 +132,6 @@ Direct links:
  * [MIMIKEdgeClientCore](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientCore)
  * [MIMIKEdgeClientEngine](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientEngine)
  * [MIMIKEdgeClientUser](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientUser)
- * [MIMIKEdgeClientContest](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientContest)
- * [MIMIKEdgeClientContent](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientContent)
- * [MIMIKEdgeClientAssessment](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientAssessment)
- * [MIMIKEdgeClientNotification](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientNotification)
- * [MIMIKEdgeClientTracker](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientTracker)
- * [MIMIKEdgeClientContentCache](https://github.com/mimikgit/cocoapod-MIMIKEdgeClientContentCache)
 
 ## Author
 
