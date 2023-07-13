@@ -487,9 +487,9 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore15MIMIKEdgeClient")
 
 
 
-
 @interface MIMIKEdgeClient (SWIFT_EXTENSION(MIMIKEdgeClientCore))
 @end
+
 
 
 
@@ -526,7 +526,7 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore8MIMIKLog")
 @end
 
 
-/// Microservice instance object.
+/// Object representing edge microservice.
 SWIFT_CLASS("_TtC19MIMIKEdgeClientCore17MIMIKMicroservice")
 @interface MIMIKMicroservice : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;

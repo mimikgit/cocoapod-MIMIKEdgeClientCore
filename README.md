@@ -30,6 +30,8 @@
  * `deployedMicroserviceImage`
  * `deployedMicroserviceContainers`
  * `deployedMicroserviceContainer`
+ * `updateMicroservice`
+ * `updateMicroserviceConfig`
  * `edgeEngineIdToken`
  * `edgeEngineInfo`
  * `externalEdgeEngineIsRunning`
@@ -62,6 +64,7 @@
 
 ## Authentication Services
  
+ * `authenticateDeveloperAccess`
  * `authenticateEdgeEngineAccess`
  * `validateEdgeEngineAccess`
  * `authenticateUserAccess`

@@ -215,7 +215,12 @@ extension Swift.KeyedDecodingContainerProtocol {
   public class func expectedContainerName(name: Swift.String) -> Swift.String
   public class func expectedBaseApiPath(name: Swift.String) -> Swift.String
   public class func expectedDeployedBaseApiPath(name: Swift.String, clientId: Swift.String) -> Swift.String
+  public func basePath() -> Swift.String?
+  @available(*, unavailable, renamed: "basePath")
   public func baseApiPath() -> Swift.String?
+  public func fullPath() -> Swift.String?
+  public func urlComponents() -> Foundation.URLComponents?
+  public func urlComponents(withEndpoint endpoint: Swift.String) -> Foundation.URLComponents?
   @objc deinit
 }
 @objc public class MIMIKService : ObjectiveC.NSObject, Foundation.NSCoding {
@@ -227,8 +232,7 @@ extension Swift.KeyedDecodingContainerProtocol {
   public var basePath: Swift.String?
   @objc required convenience public init?(coder aDecoder: Foundation.NSCoder)
   public init(rootUrl: Foundation.URL, clientId: Swift.String, expectedSwaggerFileVersion: Swift.String?, healthCheckPath: Swift.String?, basePath: Swift.String? = nil, authScopes: [Swift.String]? = [])
-  convenience public init(rootUrl: Foundation.URL, clientId: Swift.String, basePath: Swift.String?)
-  convenience public init(rootUrl: Foundation.URL, clientId: Swift.String, authScopes: [Swift.String])
+  convenience public init(rootUrl: Foundation.URL, clientId: Swift.String, basePath: Swift.String? = nil, authScopes: [Swift.String] = [])
   @objc public func encode(with aCoder: Foundation.NSCoder)
   public func urlComponents() -> Foundation.URLComponents?
   @objc deinit
@@ -389,6 +393,12 @@ public struct MIMIKMicroserviceEmbedError : Swift.Codable {
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   final public func deployMicroservice(edgeEngineAccessToken: Swift.String, config: MIMIKEdgeClientCore.MIMIKMicroserviceConfig, imageTarPath: Swift.String) async -> Swift.Result<MIMIKEdgeClientCore.MIMIKMicroservice, Foundation.NSError>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func updateMicroservice(edgeEngineAccessToken: Swift.String, microservice: MIMIKEdgeClientCore.MIMIKMicroservice, imageTarPath: Swift.String, envVariables: [Swift.String : Swift.String]? = [:]) async -> Swift.Result<MIMIKEdgeClientCore.MIMIKMicroservice, Foundation.NSError>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func updateMicroserviceConfig(edgeEngineAccessToken: Swift.String, microservice: MIMIKEdgeClientCore.MIMIKMicroservice, envVariables: [Swift.String : Swift.String]) async -> Swift.Result<Swift.Bool, Foundation.NSError>
   #endif
   #if compiler(>=5.3) && $AsyncAwait
   final public func undeployMicroservice(edgeEngineAccessToken: Swift.String, microservice: MIMIKEdgeClientCore.MIMIKMicroservice) async -> Swift.Result<Swift.Bool, Foundation.NSError>
@@ -1034,6 +1044,10 @@ extension MIMIKEdgeClientCore.MIMIKBeamProvider {
 }
 extension MIMIKEdgeClientCore.MIMIKEdgeClient {
   #if compiler(>=5.3) && $AsyncAwait
+  final public func authenticateDeveloperAccess(developerIdToken: Swift.String, edgeEngineIdToken: Swift.String? = nil) async -> Swift.Result<MIMIKEdgeClientCore.MIMIKAuthorization, Foundation.NSError>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(*, unavailable, renamed: "authenticateDeveloperAccess")
   final public func authenticateEdgeEngineAccess(service: MIMIKEdgeClientCore.MIMIKService, developerIdToken: Swift.String, edgeEngineIdToken: Swift.String) async -> Swift.Result<MIMIKEdgeClientCore.MIMIKAuthorization, Foundation.NSError>
   #endif
   #if compiler(>=5.3) && $AsyncAwait
@@ -1065,11 +1079,14 @@ open class MIMIKURLComponentsBuilder {
   public init()
   open func create() -> Foundation.URLComponents
   open func set(service: MIMIKEdgeClientCore.MIMIKService) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
+  open func set(scheme: Swift.String, host: Swift.String, port: Swift.Int, path: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
+  open func set(scheme: Swift.String, host: Swift.String, port: Swift.Int) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
+  open func set(scheme: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
+  open func set(host: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
+  open func set(port: Swift.Int) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
   open func set(path: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
   open func append(path: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
   open func set(queryItems: [Swift.String : Any]) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
-  open func set(scheme: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
-  open func set(host: Swift.String) -> MIMIKEdgeClientCore.MIMIKURLComponentsBuilder
   @objc deinit
 }
 extension MIMIKEdgeClientCore.MIMIKEdgeClient {
