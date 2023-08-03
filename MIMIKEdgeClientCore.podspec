@@ -1,3 +1,23 @@
+v14.0.2 MIMIKEdgeClientCore
+
+MIMIKAuthorization
+Renamed method with deprecation notice and in-code redirect:
+userAccessToken() to accessToken()
+userAccessTokenValidates() to accessTokenValidation()
+userAccessTokenDecoded() to accessTokenDecoded()
+userAccessTokenSub() to accessTokenSub()
+userAccessTokenScopes() to accessTokenScopes()
+userAccessTokenExpiryDate() to accessTokenExpiryDate()
+
+Removed support for a deprecated phoneNumberStart sign-in method
+
+External edgeEngine support
+New method:
+Deactivating external edgeEngine
+
+Changes:
+External edgeEngine activation is no longer possible, when internal edgeEngine is activated
+Repeat external edgeEngine activation no longer fails, when it's requested for the same, already activated host and port values
 #
 #  Be sure to run `pod spec lint MIMIKEdgeClient.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.

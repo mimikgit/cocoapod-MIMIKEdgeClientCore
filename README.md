@@ -10,6 +10,7 @@
  * `selectBackend`
  * `selectedBackend`
  * `activateExternalEdgeEngine`
+ * `deactivateExternalEdgeEngine`
  * `externalEdgeEngineActivated`
  * `healthCheck`
  * `manuallySelectedBackend`
