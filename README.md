@@ -9,9 +9,6 @@
  * `setLoggingLevel`
  * `selectBackend`
  * `selectedBackend`
- * `activateExternalEdgeEngine`
- * `deactivateExternalEdgeEngine`
- * `externalEdgeEngineActivated`
  * `healthCheck`
  * `manuallySelectedBackend`
  * `applicationBackend`
@@ -40,6 +37,13 @@
  * `edgeEngineUrlString`
  * `edgeEngineWorkingDirectory`
  * `edgeEngineWebSocketServiceLink`
+ 
+### External edgeEngine controls
+
+ * `activateExternalEdgeEngine`
+ * `deactivateExternalEdgeEngine`
+ * `deactivateExternalEdgeEngine`
+ * `externalEdgeEngineActivated`
 
 ### Backend Calls
  * `callBackend`
