@@ -42,7 +42,6 @@
 
  * `activateExternalEdgeEngine`
  * `deactivateExternalEdgeEngine`
- * `deactivateExternalEdgeEngine`
  * `externalEdgeEngineActivated`
 
 ### Backend Calls

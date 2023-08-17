@@ -519,7 +519,7 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore19MIMIKJwtTokenHelper")
 @end
 
 
-/// Console logging class used by [mimik] modules and applications to tag and structure console log output in an organized and human readable format.
+/// Console logging class used by [mimik] modules and third party applications to tag and structure console log output in an organized and human readable format.
 SWIFT_CLASS("_TtC19MIMIKEdgeClientCore8MIMIKLog")
 @interface MIMIKLog : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -1149,7 +1149,7 @@ SWIFT_CLASS("_TtC19MIMIKEdgeClientCore19MIMIKJwtTokenHelper")
 @end
 
 
-/// Console logging class used by [mimik] modules and applications to tag and structure console log output in an organized and human readable format.
+/// Console logging class used by [mimik] modules and third party applications to tag and structure console log output in an organized and human readable format.
 SWIFT_CLASS("_TtC19MIMIKEdgeClientCore8MIMIKLog")
 @interface MIMIKLog : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

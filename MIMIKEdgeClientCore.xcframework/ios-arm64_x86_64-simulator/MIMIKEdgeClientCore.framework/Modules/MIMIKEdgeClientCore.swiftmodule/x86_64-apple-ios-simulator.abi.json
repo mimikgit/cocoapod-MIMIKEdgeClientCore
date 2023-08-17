@@ -13580,7 +13580,8 @@
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -13617,7 +13618,8 @@
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -27599,7 +27601,43 @@
             "moduleName": "MIMIKEdgeClientCore",
             "static": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "jwtTokenValidation",
+            "printedName": "jwtTokenValidation(token:type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TokenType",
+                "printedName": "MIMIKEdgeClientCore.MIMIKAuthorization.TokenType",
+                "usr": "s:19MIMIKEdgeClientCore18MIMIKAuthorizationC9TokenTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC03jwtE10Validation5token4typeSbSS_AA18MIMIKAuthorizationC0E4TypeOtFZ",
+            "mangledName": "$s19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC03jwtE10Validation5token4typeSbSS_AA18MIMIKAuthorizationC0E4TypeOtFZ",
+            "moduleName": "MIMIKEdgeClientCore",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -27632,8 +27670,10 @@
             "mangledName": "$s19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC03jwtE18ValidationInternal5token4typeSbSS_AA18MIMIKAuthorizationC0E4TypeOtFZ",
             "moduleName": "MIMIKEdgeClientCore",
             "static": true,
+            "deprecated": true,
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Available"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -27666,6 +27706,49 @@
             "declKind": "Func",
             "usr": "s:19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC03jwtE4Json5token10SwiftyJSON0K0VSgSS_tFZ",
             "mangledName": "$s19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC03jwtE4Json5token10SwiftyJSON0K0VSgSS_tFZ",
+            "moduleName": "MIMIKEdgeClientCore",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "valueFromToken",
+            "printedName": "valueFromToken(token:key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC09valueFromE05token3keySSSgSS_SStFZ",
+            "mangledName": "$s19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC09valueFromE05token3keySSSgSS_SStFZ",
             "moduleName": "MIMIKEdgeClientCore",
             "static": true,
             "declAttributes": [
@@ -27728,52 +27811,10 @@
             "mangledName": "$s19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC09valueFromE05token3key10completionySS_SSySSSgctFZ",
             "moduleName": "MIMIKEdgeClientCore",
             "static": true,
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "valueFromToken",
-            "printedName": "valueFromToken(token:key:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC09valueFromE05token3keySSSgSS_SStFZ",
-            "mangledName": "$s19MIMIKEdgeClientCore19MIMIKJwtTokenHelperC09valueFromE05token3keySSSgSS_SStFZ",
-            "moduleName": "MIMIKEdgeClientCore",
-            "static": true,
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "Available"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -51134,14 +51175,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKEdgeClient.swift",
       "kind": "BooleanLiteral",
-      "offset": 4765,
+      "offset": 5146,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKEdgeClient.swift",
       "kind": "Dictionary",
-      "offset": 6636,
+      "offset": 7017,
       "length": 3,
       "value": "[]"
     },
@@ -51442,98 +51483,98 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 537,
+      "offset": 529,
       "length": 29,
       "value": "\"Invalid edgeEngine ID Token\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 637,
       "length": 35,
       "value": "\"Invalid edgeEngine ID Token Error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "IntegerLiteral",
-      "offset": 688,
+      "offset": 680,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 856,
+      "offset": 848,
       "length": 44,
       "value": "\"edge engine access or id token empty error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 943,
+      "offset": 935,
       "length": 20,
       "value": "\"⚠️⚠️⚠️\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 1009,
+      "offset": 1001,
       "length": 44,
       "value": "\"edge engine access or id token empty Error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "IntegerLiteral",
-      "offset": 1061,
+      "offset": 1053,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 1476,
+      "offset": 1468,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 1526,
+      "offset": 1518,
       "length": 20,
       "value": "\"⚠️⚠️⚠️\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 1624,
+      "offset": 1616,
       "length": 24,
       "value": "\"Jsonrpc Response Error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "IntegerLiteral",
-      "offset": 1656,
+      "offset": 1648,
       "length": 3,
       "value": "500"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 1784,
+      "offset": 1776,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "StringLiteral",
-      "offset": 1836,
+      "offset": 1828,
       "length": 20,
       "value": "\"⚠️⚠️⚠️\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKEdgeClient+AccountAssociation.swift",
       "kind": "BooleanLiteral",
-      "offset": 1914,
+      "offset": 1906,
       "length": 4,
       "value": "true"
     },
@@ -52296,49 +52337,49 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "StringLiteral",
-      "offset": 1218,
+      "offset": 1210,
       "length": 27,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "StringLiteral",
-      "offset": 1244,
+      "offset": 1236,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "StringLiteral",
-      "offset": 1267,
+      "offset": 1259,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "StringLiteral",
-      "offset": 1316,
+      "offset": 1308,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "StringLiteral",
-      "offset": 1356,
+      "offset": 1348,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "StringLiteral",
-      "offset": 1752,
+      "offset": 1744,
       "length": 15,
       "value": "\"Request error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Internal\/MIMIKRequest+Internal.swift",
       "kind": "IntegerLiteral",
-      "offset": 1775,
+      "offset": 1767,
       "length": 3,
       "value": "500"
     },
@@ -52730,483 +52771,483 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 465,
+      "offset": 477,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 487,
+      "offset": 499,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 510,
+      "offset": 522,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 533,
+      "offset": 545,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
+      "offset": 566,
       "length": 2,
       "value": "47"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 465,
+      "offset": 477,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 487,
+      "offset": 499,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 510,
+      "offset": 522,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 533,
+      "offset": 545,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
+      "offset": 566,
       "length": 2,
       "value": "47"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 465,
+      "offset": 477,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 487,
+      "offset": 499,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 510,
+      "offset": 522,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 533,
+      "offset": 545,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 554,
+      "offset": 566,
       "length": 2,
       "value": "47"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 4068,
+      "offset": 4080,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 4388,
+      "offset": 4400,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 4710,
+      "offset": 4722,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5033,
+      "offset": 5045,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5326,
+      "offset": 5338,
       "length": 20,
       "value": "\"⚠️⚠️⚠️\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5373,
+      "offset": 5385,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5716,
+      "offset": 5728,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5754,
+      "offset": 5766,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5802,
+      "offset": 5814,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5810,
+      "offset": 5822,
       "length": 11,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5891,
+      "offset": 5903,
       "length": 9,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5899,
+      "offset": 5911,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5930,
+      "offset": 5942,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5975,
+      "offset": 5987,
       "length": 38,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5987,
+      "offset": 5999,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 5995,
+      "offset": 6007,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 6012,
+      "offset": 6024,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 6101,
+      "offset": 6113,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 6364,
+      "offset": 6376,
       "length": 8,
       "value": "\"custom\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 6400,
+      "offset": 6412,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 6670,
+      "offset": 6682,
       "length": 45,
       "value": "\"[mimik] %{private}@ %{private}@ %{private}@\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 6837,
+      "offset": 6849,
       "length": 42,
       "value": "\"[mimik] %{public}@ %{public}@ %{public}@\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7307,
+      "offset": 7319,
       "length": 19,
       "value": "\"[MIMIKEdgeClient]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7381,
+      "offset": 7393,
       "length": 23,
       "value": "\"[MIMIKEdgeClientCore]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7461,
+      "offset": 7473,
       "length": 25,
       "value": "\"[MIMIKEdgeClientEngine]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7541,
+      "offset": 7553,
       "length": 23,
       "value": "\"[MIMIKEdgeClientUser]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7622,
+      "offset": 7634,
       "length": 26,
       "value": "\"[MIMIKEdgeClientTracing]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7706,
+      "offset": 7718,
       "length": 26,
       "value": "\"[MIMIKEdgeClientAdapter]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7790,
+      "offset": 7802,
       "length": 26,
       "value": "\"[MIMIKEdgeClientFinance]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7863,
+      "offset": 7875,
       "length": 16,
       "value": "\"[MIMIK Access]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 7937,
+      "offset": 7949,
       "length": 26,
       "value": "\"[MIMIKEdgeClientProfile]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8018,
+      "offset": 8030,
       "length": 23,
       "value": "\"[MIMIKEdgeClientPeer]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8101,
+      "offset": 8113,
       "length": 28,
       "value": "\"[MIMIKEdgeClientThumbnail]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8190,
+      "offset": 8202,
       "length": 29,
       "value": "\"[MIMIKEdgeClientAssessment]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8282,
+      "offset": 8294,
       "length": 31,
       "value": "\"[MIMIKEdgeClientNotification]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8370,
+      "offset": 8382,
       "length": 26,
       "value": "\"[MIMIKEdgeClientTracker]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8455,
+      "offset": 8467,
       "length": 27,
       "value": "\"[MIMIKEdgeClientIdentity]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8545,
+      "offset": 8557,
       "length": 31,
       "value": "\"[MIMIKEdgeClientContentCache]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8634,
+      "offset": 8646,
       "length": 26,
       "value": "\"[mimikEdgeClientContest]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8719,
+      "offset": 8731,
       "length": 27,
       "value": "\"[mimikEdgeClientContents]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 8793,
+      "offset": 8805,
       "length": 15,
       "value": "\"[MIMIKHealth]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9171,
+      "offset": 9183,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9213,
+      "offset": 9225,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9254,
+      "offset": 9266,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9296,
+      "offset": 9308,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9338,
+      "offset": 9350,
       "length": 2,
       "value": "47"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 9697,
+      "offset": 9709,
       "length": 9,
       "value": "\"[debug]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 9746,
+      "offset": 9758,
       "length": 8,
       "value": "\"[info]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 9795,
+      "offset": 9807,
       "length": 9,
       "value": "\"[error]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 9845,
+      "offset": 9857,
       "length": 9,
       "value": "\"[fault]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 9893,
+      "offset": 9905,
       "length": 7,
       "value": "\"[off]\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 10315,
+      "offset": 10327,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 10471,
+      "offset": 10483,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKLog.swift",
       "kind": "StringLiteral",
-      "offset": 10808,
+      "offset": 10820,
       "length": 24,
       "value": "\"current_logging_level_\""
     },
@@ -54144,140 +54185,133 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1098,
+      "offset": 1706,
       "length": 44,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1115,
+      "offset": 1723,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1124,
+      "offset": 1732,
       "length": 1,
       "value": "\" (invalid length)\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1196,
+      "offset": 1804,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1305,
+      "offset": 1913,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1467,
+      "offset": 2075,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1484,
+      "offset": 2092,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1494,
+      "offset": 2102,
       "length": 1,
       "value": "\" (decode)\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1558,
+      "offset": 2166,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1708,
+      "offset": 2316,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1725,
+      "offset": 2333,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1735,
+      "offset": 2343,
       "length": 1,
       "value": "\" (expiry)\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 1799,
+      "offset": 2407,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1930,
+      "offset": 2538,
       "length": 38,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1947,
+      "offset": 2555,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 1957,
+      "offset": 2565,
       "length": 1,
       "value": "\" (expired)\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 2022,
+      "offset": 2630,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "BooleanLiteral",
-      "offset": 2054,
+      "offset": 2662,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
       "kind": "StringLiteral",
-      "offset": 2926,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKJwtTokenHelper.swift",
-      "kind": "StringLiteral",
-      "offset": 3393,
+      "offset": 4002,
       "length": 3,
       "value": "\" \""
     },
@@ -54984,35 +55018,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/AuthenticationServices\/Public\/MIMIKAuthorization.swift",
       "kind": "StringLiteral",
-      "offset": 5090,
+      "offset": 5082,
       "length": 31,
       "value": "\"MIMIKAuthorization init Error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/AuthenticationServices\/Public\/MIMIKAuthorization.swift",
       "kind": "StringLiteral",
-      "offset": 5164,
+      "offset": 5156,
       "length": 20,
       "value": "\"⚠️⚠️⚠️\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/AuthenticationServices\/Public\/MIMIKAuthorization.swift",
       "kind": "BooleanLiteral",
-      "offset": 6540,
+      "offset": 6532,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/AuthenticationServices\/Public\/MIMIKAuthorization.swift",
       "kind": "StringLiteral",
-      "offset": 7476,
+      "offset": 7460,
       "length": 5,
       "value": "\"sub\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/AuthenticationServices\/Public\/MIMIKAuthorization.swift",
       "kind": "StringLiteral",
-      "offset": 7879,
+      "offset": 7863,
       "length": 7,
       "value": "\"scope\""
     },
@@ -56685,77 +56719,77 @@
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1730,
+      "offset": 1722,
       "length": 27,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1756,
+      "offset": 1748,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1779,
+      "offset": 1771,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1835,
+      "offset": 1827,
       "length": 18,
       "value": "\"application\/json\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 1875,
+      "offset": 1867,
       "length": 14,
       "value": "\"Content-Type\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "FloatLiteral",
-      "offset": 2125,
+      "offset": 2117,
       "length": 4,
       "value": "60.0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2633,
+      "offset": 2617,
       "length": 27,
       "value": "\"Bearer \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2659,
+      "offset": 2643,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2682,
+      "offset": 2666,
       "length": 15,
       "value": "\"Authorization\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2983,
+      "offset": 2967,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/MIMIKEdgeClientCore\/CoreServices\/Public\/MIMIKRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3033,
+      "offset": 3017,
       "length": 20,
       "value": "\"⚠️⚠️⚠️\""
     },

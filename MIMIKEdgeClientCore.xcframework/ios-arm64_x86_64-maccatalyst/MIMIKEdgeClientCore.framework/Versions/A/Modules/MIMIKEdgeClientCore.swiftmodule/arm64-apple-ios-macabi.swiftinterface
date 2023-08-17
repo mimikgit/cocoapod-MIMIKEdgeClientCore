@@ -786,10 +786,13 @@ public protocol RequestBuilderFactory {
 @objc @_inheritsConvenienceInitializers public class MIMIKJwtTokenHelper : ObjectiveC.NSObject {
   public class func jwtTokenDecoded(token: Swift.String) -> (any JWTDecode.JWT)?
   public class func jwtTokenExpiry(token: Swift.String) -> Foundation.Date?
+  public class func jwtTokenValidation(token: Swift.String, type: MIMIKEdgeClientCore.MIMIKAuthorization.TokenType) -> Swift.Bool
+  @available(*, deprecated, renamed: "jwtTokenValidation")
   public class func jwtTokenValidationInternal(token: Swift.String, type: MIMIKEdgeClientCore.MIMIKAuthorization.TokenType) -> Swift.Bool
   public class func jwtTokenJson(token: Swift.String) -> SwiftyJSON.JSON?
-  public class func valueFromToken(token: Swift.String, key: Swift.String, completion: @escaping (_ value: Swift.String?) -> Swift.Void)
   public class func valueFromToken(token: Swift.String, key: Swift.String) -> Swift.String?
+  @available(*, deprecated, renamed: "valueFromToken")
+  public class func valueFromToken(token: Swift.String, key: Swift.String, completion: @escaping (_ value: Swift.String?) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
