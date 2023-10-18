@@ -1,3 +1,7 @@
+# PLEASE NOTE THIS MIMIK CORE CLIENT LIBRARY IS NO LONGER BEING MAINTENAINED
+# THE NEXT GENERATION CLIENT LIBRARY IS AVAILABLE HERE: https://github.com/mimikgit/cocoapod-EdgeCore#
+
+#
 # MIMIKEdgeClientCore
 
  MIMIKEdgeClientCore library can help you interact with mimik core services with the following APIs:
